@@ -8,9 +8,9 @@
 		
 		"content_scripts": [
 		   {
-		     "matches": ["https://*.hh.ru/*"],
-		     "css": ["template.css"],
-			 "js": ["template.js"]
+		     "matches": ["https://*.hh.ru/"],
+		     "css": ["home.css"],
+			 "js": ["home.js"]
 		   }
 		 ],
 		
