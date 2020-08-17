@@ -1,0 +1,50 @@
+{
+	    "name": "HeadHunter Chrome App Modificator",
+	    "description" : "Change style like as mobile app on Android",
+	    "version": "1.1",
+	    "manifest_version": 2,
+		
+		"options_page": "options.html",
+		
+		"content_scripts": [
+		   {
+		     "matches": ["https://*.hh.ru/*"],
+		     "css": ["template.css"],
+			 "js": ["template.js"]
+		   }
+		 ],
+		
+		
+		"icons": {
+  	        "16":  "images/favicon-16.png",
+  	        "32":  "images/favicon-32.png",
+  	        "48":  "images/favicon-48.png",
+  	        "128": "images/favicon-128.png"
+		    },
+		
+	    "browser_action": {
+	      "default_popup": "popup.html",
+		  "default_icon": {
+		  	        "16":  "images/favicon-16.png",
+		  	        "32":  "images/favicon-32.png",
+		  	        "48":  "images/favicon-48.png",
+		  	        "128": "images/favicon-128.png"
+		  	      }
+	    },
+			    "permissions": ["activeTab", "declarativeContent", "storage"],
+				
+		"background": {
+			      "scripts": ["background.js"],
+			      "persistent": false
+			    },
+	    "commands": {
+	      "_execute_browser_action": {
+	        "suggested_key": {
+	          "default": "Ctrl+Shift+F",
+	          "mac": "MacCtrl+Shift+F"
+	        },
+	        "description": "Opens hello.html"
+	      }
+	    }
+	  
+	  }
